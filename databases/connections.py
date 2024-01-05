@@ -34,3 +34,7 @@ class Database:
         if doc:
             return doc
         return False
+    
+    async def save(self, document) -> None:
+        await document.create()
+        return None
